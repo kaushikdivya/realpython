@@ -1,0 +1,47 @@
+def makePoem():
+    return
+
+import random
+nouns = ["fossil", "horse", "aardvark", "judge", "chef", "mango", "extrovert", "gorilla"]
+verbs = ["kicks", "jingles", "bounces", "slurps", "meows", "explodes", "curdles"]
+adj = ["furry", "balding", "incredulous", "fragrant", "exuberant", "glistening"]
+prep = ["against", "after", "into", "beneath", "upon", "for", "in", "like", "over","within"]
+adv = ["curiously", "extravagantly", "tantalizingly", "furiously", "sensuously"]
+
+n=[]
+v=[]
+aj=[]
+av=[]
+pep=[]
+
+while True:
+    n1 = random.choice(nouns)
+    if n1 not in n and len(n) < 4:
+        n.append(n1)
+    
+else:
+        break
+
+while True:
+    v1 = random.choice(verbs)
+    aj1 = random.choice(adj)
+    pep1 = random.choice(prep)
+    av1 = random.choice(adv)
+    if n1 not in n:
+        n.append(n1)
+    if v1 not in v:
+        v.append(v1)
+    if aj1 not in aj:
+        aj.append(aj1)
+    if i < 2 and pep1 not in pep:
+        pep.append(pep1)
+    if i < 1 and av1 not in av:
+        av.append(av1)
+
+print n
+print aj
+print av
+print pep
+print v
+        
+        

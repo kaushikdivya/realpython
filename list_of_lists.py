@@ -8,22 +8,27 @@ def enrollment_stats(universites):
 
 def mean(list_for_mean):
     total = 0
+    if list_for_mean == []:
+        return "List is empty","total is 0"
     for i in list_for_mean:
         total = total + i
     mean_value = total/len(list_for_mean)
     return mean_value,total
 
 def median(list_for_median):
-    for i in list_for_median:
-        list_for_median.sort()
-        list_for_median_len = len(list_for_median)
-        if ( list_for_median_len % 2 == 0 ):
-            median_value = (list_for_median[list_for_median_len/2] + list_for_median[list_for_median_len/2 - 1])/2
-        else:
-            median_value = list_for_median[list_for_median_len/2]
+    if not list_for_median:
+        return 0
+    else:
+        for i in list_for_median:
+            list_for_median.sort()
+            list_for_median_len = len(list_for_median)
+            if ( list_for_median_len % 2 == 0 ):
+                median_value = (list_for_median[list_for_median_len/2] + list_for_median[list_for_median_len/2 - 1])/2
+            else:
+                median_value = list_for_median[list_for_median_len/2]
     return median_value
-universites = [['CaliforniaInstituteofTechnology',2175,37704],['Harvard',19627,39849],['MassachusettsInstituteofTechnology',10566,40732],['Princeton',7802,37000],['Rice',5879,35551],['Stanford',19535,40569],['Yale',11701,40500]]
-
+#universites = [['CaliforniaInstituteofTechnology',2175,37704],['Harvard',19627,39849],['MassachusettsInstituteofTechnology',10566,40732],['Princeton',7802,37000],['Rice',5879,35551],['Stanford',19535,40569],['Yale',11701,40500]]
+universites = []
 student_enrolled,tuition_fee = enrollment_stats(universites)
 student_mean, total_student = mean(student_enrolled)
 student_median = median(student_enrolled)
